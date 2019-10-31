@@ -1,0 +1,138 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Kavivanar', cursive;
+    font-weight: normal;
+    color: purple;
+}
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1em;
+}
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.leftheader {
+    flex-basis: 40%;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+.binar-logo {
+    width: 30%;
+    border-radius: 50%;
+}
+.rightheader {
+    flex-basis: 60%;
+    margin-top: 1.75rem;
+    padding-left: 0.5rem;
+}
+.rightheader h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid #a61f11;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    padding: 0.5rem;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    text-decoration: none;
+    color: purple;
+    padding-right: 0.7rem;
+}
+nav a:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+section {
+    border-bottom: 1px solid #da0090;
+    margin-bottom: 0.3rem;
+}
+fieldset {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+legend {
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	display: block;
+}
+label {
+	display: block;
+	padding-bottom: 0.5rem;
+}
+form #name, #phone, #email, #education, #date {
+    width: 30%;
+    height: 100%;
+    margin-bottom: 0.5rem;
+}
+select {
+	font-size: 1rem;
+}
+textarea {
+    width: 100%;
+    height: 8rem;
+}
+button {
+	font-size: 1rem;
+    margin: 2rem 0;
+    background-color: #a61f11;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+}
+table {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 0.8rem;
+}
+th {
+    color: darkmagenta;
+}
+td {
+    padding: 1rem;
+}
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #a61f11;
+}
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+footer li {
+    display: inline-block;
+    padding-right: 1rem;
+}
+footer img {
+    width: 80%;
+}

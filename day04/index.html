@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Registration Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Kavivanar|Open+Sans" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="leftheader">
+				<img class="binar-logo" src="img/binar-logo.png" alt="binar-logo">
+			</div>
+			<div class="rightheader">
+				<h1>Binar Academy</h1>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</li>
+				<li><a href="https://binar.co.id/">Info</a></li>
+			</ul>
+		</nav>
+
+		<h2>Student Bootcamp Registration</h2>
+		<p>Fill out the form below to place an order to become Binarian.</p>
+		<form action="">
+			<fieldset>
+				<legend>Your contact information</legend>
+					<label for="name">Your name</label> 
+						<input type="text" id="name" name="name">
+					<label for="phone">Phone number</label>
+						<input type="number" id="phone" name="phone" placeholder="Don't forget your phone">
+					<label for="email">Email</label>
+						<input type="text" id="email" name="email">
+					<label for="education">Education</label>
+						<select id="education" name="education">
+							<option selected>Select one...</option>
+							<option value="SMA/SMK">SMA/SMK</option>
+							<option value="S1">S1</option>
+							<option value="S2">S2</option>
+						</select>
+			</fieldset>
+			<fieldset>
+				<legend>Choose your path </legend>
+					<label for="date">Applying  date</label>
+						<input type="date" id="date" name="date">
+					<p>What type of path do you prefer?</p>
+					<label>
+						<input type="radio" name="" value="frontend" checked>Frontend Development
+					</label>
+					<label>
+						<input type="radio" name="" value="backend">Backend Development
+					</label>
+					<label>
+						<input type="radio" name="" value="android">Fullstack Development
+					</label>
+					<p>Choose your free time</p>
+					<label>
+						<input type="checkbox" name="" value="morning" checked>09.00 - 12.00
+					</label>
+					<label>
+						<input type="checkbox" name="" value="afternoon">13.00 - 16.00
+					</label>
+					<label>
+						<input type="checkbox" name="" value="evening">18.30 - 21.30
+					</label>
+					<p>Why you want to study here</p>
+					<label>
+						<textarea id="comments" name="comments" placeholder="Please explain.."></textarea>
+					</label>
+			</fieldset>
+			<button type="submit">Submit</button>
+		</form>
+
+		<section>
+			<h3>Binar Featured City</h3>
+			<table>
+				<tr>
+					<th>Jogjakarta</th>
+					<th>Jakarta</th>
+					<th>BSD City</th>
+					<th>Batam</th>
+				</tr>
+				<tr>
+					<td>Binar Scholarship</td>
+					<td>Binar Masterclass</td>
+					<td>Binar Scholarship, Binar Plus</td>
+					<td>Glints Academy Powered by Binar</td>
+				</tr>
+			</table>
+		</section>
+
+		<footer>
+			<p>© 2017 - 2019 Binar Academy. All Rights Reserved</p>
+			<ul>
+				<li><a href="https://www.facebook.com/binaracademy/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a></li>
+				<li><a href="https://www.instagram.com/academybinar/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a></li>
+				<li><a href="https://www.linkedin.com/school/binar-academy/" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a></li>
+			</ul>
+		</footer>
+</div>
+</body>
+</html>
