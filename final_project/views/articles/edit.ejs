@@ -1,0 +1,15 @@
+<%- include("../partials/header"); -%>
+    <h1>Edit Article</h1>
+    <form class="" action="/articles" method="get">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="title" value="<%= article.title %>"><br>
+        <label>Author</label>
+        <input class="form-control" type="text" name="author" value="<%= article.author %>"><br>
+        <label>Post</label>
+        <textarea class="form-control" name="description" rows="5" cols="30"><%= article.description %></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" name="button">Publish</button>
+    </form>
+
+<%- include("../partials/footer"); -%>

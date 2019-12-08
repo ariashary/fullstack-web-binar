@@ -1,0 +1,17 @@
+<%- include("../partials/header"); -%>
+    <h1>Articles</h1>
+    <a href="/articles/compose">Create Article</a>
+    <br><br>
+    <ol>
+        <% data.forEach(function(item){ %>
+            <li>
+                Title: <%= item.title %><br>
+                Author: <%= item.author %><br>
+                Description: <%= item.description %><br>
+                <a href="/articles/detail/<%= item._id %>">Show</a>
+                <a href="/articles/edit/<%= item._id %>">Edit</a>
+                <a href="/articles/delete/<%= item._id %>">Delete</a>
+            </li><br>
+        <% }) %> 
+    </ol>
+<%- include("../partials/footer"); -%>
