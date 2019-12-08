@@ -1,0 +1,13 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aqua;
+    padding: 50px;
+    color: darkolivegreen;
+}
+h1, h2 {
+    text-align: center;
+}
+p {
+    color: brown;
+    text-align: center;
+}
