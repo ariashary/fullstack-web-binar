@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEADER -->
+    <%- include("../partials/header") %>
+
+    <body>
+        <div id="page-content">
+        <!-- NAVIGATION -->
+        <%- include("../partials/navigations") %>
+        
+        <h1>Articles Page</h1>
+        <a href="/articles/create">Create article</a>
+        <br><br>
+        <br><br>
+
+        <ol>
+            <% data.forEach(function(item){ %>
+                <li>
+                    Id: <%= item._id %><br>
+                    Title: <%= item.title %><br>
+                    Author: <%= item.author %><br>
+                    Description: <%= item.description %><br>
+                    Date: <%= item.published_date %><br><br>
+                    <button onclick="location.href='/articles/detail/<%= item._id %>'" type="button" class="btn btn-primary">Show</button>
+                    <button onclick="location.href='/articles/edit/<%= item._id %>'" type="button" class="btn btn-warning">Edit</button>
+                    <button onclick="location.href='/articles/delete/<%= item._id %>'" type="button" class="btn btn-danger">Delete</button><br><br>
+                </li>
+            <% }) %> 
+        </ol>
+
+
+        <!-- FOOTER -->
+        <%- include("../partials/footer") %>
+    </div>
+    </body>
+</html>

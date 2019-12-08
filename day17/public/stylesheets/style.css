@@ -1,0 +1,50 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: lightcyan;
+  padding: 50px;
+  color: darkolivegreen;
+  height: 100%;
+}
+#page-content {
+  flex: 1 0 auto;
+}
+
+h1, h2 {
+  text-align: center;
+}
+p {
+  color: black;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+
+
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+footer {
+  margin-top: 100%;
+}
