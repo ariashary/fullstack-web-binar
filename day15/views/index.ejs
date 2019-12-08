@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title><%= title %></title>
+      <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+      <!-- NAVIGATION -->
+      <%- include("partials/navigations") %>
+      
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+
+      <form action="/">
+        <label for="inputTitle">Title</label>
+        <input type="text" id="inputTitle" placeholder="Title"><br>
+        
+        <label for="inputAuthor">Author</label>
+        <input type="text" id="inputAuthor" placeholder="Author"><br>
+
+        <label for="inputDescription">Description</label><br>
+        <textarea name="description" id="inputDescription" cols="30" rows="10" placeholder="Description"></textarea><br>
+
+        <label for="inputDate">Date</label>
+        <input type="date" id="inputDate"><br>
+
+        <input type="submit">
+      </form>
+
+      <!-- FOOTER -->
+      <%- include("partials/footer") %>
+    </body>
+</html>
