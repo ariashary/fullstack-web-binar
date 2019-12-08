@@ -1,0 +1,18 @@
+<%- include("../partials/header") %>
+    <body>
+        <%- include("../partials/navigations") %>
+        <div class="container">
+            <h1>Articles Page</h1>
+            <a href="/articles">Article Page</a>
+            <br><br>
+            <br><br>
+            <% article.forEach(function(item){ %>
+                <p>Title: <%= item.title %></p>
+                <p>Author: <%= item.author %></p>
+                <p>Description: <%= item.description %></p>
+                <p>Date: <%= item.published_date %></p>
+            <% }) %>
+        </div>
+        <%- include("../partials/footer") %>
+    </body>
+</html>

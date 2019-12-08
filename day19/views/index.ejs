@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+  <body>
+    <%- include("partials/navigations") %>
+    <div class="container index">
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+    </div>
+    <div class="button-index">
+      <button type="button" onclick="location.href='/articles';" class="btn btn-outline-primary btn-lg">All Articles</button>
+      <button type="button" onclick="location.href='/articles/create';" class="btn btn-outline-secondary btn-lg">Create New Articles</button>
+    </div>
+    <%- include("partials/footer") %>
+  </body>
+</html>

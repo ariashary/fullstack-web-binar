@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+    <body>
+        <%- include("../partials/navigations") %>
+        <div class="container">
+            <h1>Create Article</h1>
+            <form action="/articles/create_article" method="POST">
+                <div class="form-group">
+                    <label for="inputTitle">Title:</label>
+                    <input type="text" name="title" class="form-control" id="inputTitle" placeholder="Your title" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="inputAuthor">Author:</label>
+                    <input type="text" id="author-input" name="author" class="form-control" id="inputAuthor" placeholder="Your Author" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="inputDescription">Description:</label>
+                    <textarea name="description" class="form-control" id="inputDescription" rows="5" placeholder="Description" required="required"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputDate">Published Date:</label>
+                    <input type="date" data-date="" data-date-format="DD MMMM YYYY" name="published_date" class="form-control" id="inputDate" required="required">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <%- include("../partials/footer") %>
+    </body>
+</html>

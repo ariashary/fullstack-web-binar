@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+    <body>
+        <%- include("../partials/navigations") %>
+        <div class="container">
+            <h1>Articles Page</h1>
+            <a href="/articles/create">Create article</a>
+            <br><br>
+            <br><br>
+            <ol>
+                <% data.forEach(function(item){ %>
+                    <li>
+                        <p>Title: <%= item.title %></p>
+                        <p>Author: <%= item.author %></p>
+                        <p>Description: <%= item.description %></p>
+                        <p>Date: <%= item.published_date %></p>
+                    </li>
+                    <div class="options">
+                        <a href="/articles/detail/<%= item._id %>">Show</a>
+                        <a href="/articles/edit/<%= item._id %>">Edit</a>
+                        <a href="//articles/delete/<%= item._id %>">Delete</a>
+                    </div>
+                    <br><br>
+                <% }) %> 
+            </ol>
+        </div>
+        <%- include("../partials/footer") %>
+    </body>
+</html>
