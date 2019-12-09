@@ -2,7 +2,7 @@ var router = require('express').Router();
 
 var application_controller = require('../controllers/applicationController.js');
 
-router.get('/', application_controller.home);
+router.get('/', application_controller.index);
 router.get('/about', application_controller.about);
 router.get('/contact', application_controller.contact);
 

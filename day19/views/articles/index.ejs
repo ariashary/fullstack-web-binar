@@ -1,11 +1,14 @@
 <%- include("../partials/header") %>
     <body>
         <%- include("../partials/navigations") %>
+        <% if (message) { %>
+            <div class="alert alert-primary" role="alert">
+                <%= message %>
+            </div>
+          <% }; %>
         <div class="container">
             <h1>Articles Page</h1>
-            <a href="/articles/create">Create article</a>
-            <br><br>
-            <br><br>
+            <br>
             <ol>
                 <% data.forEach(function(item){ %>
                     <li>
@@ -17,12 +20,11 @@
                     <div class="options">
                         <a href="/articles/detail/<%= item._id %>">Show</a>
                         <a href="/articles/edit/<%= item._id %>">Edit</a>
-                        <a href="//articles/delete/<%= item._id %>">Delete</a>
+                        <a href="/articles/delete/<%= item._id %>">Delete</a>
                     </div>
-                    <br><br>
+                    <br>
                 <% }) %> 
             </ol>
         </div>
-        <%- include("../partials/footer") %>
     </body>
 </html>

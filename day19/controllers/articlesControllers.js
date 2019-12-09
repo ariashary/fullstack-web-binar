@@ -1,9 +1,13 @@
 let Article = require('../models/article');
 
-exports.home = function(req, res, next) {
+exports.index = function(req, res, next) {
+    let response_msg = req.query.message;
     Article.find({}, function(err, results) {
         if (err) throw err;
-        res.render('articles/index', { data: results });
+        res.render('articles/index', {
+            data: results, 
+            message: response_msg 
+        });
         console.log(results);
     });
 };
@@ -17,17 +21,22 @@ exports.detail = function(req, res, next) {
 };
 
 exports.edit = function(req, res, next) {
+    let date = new Date();
     let params = req.params;
     Article.find({ _id: params.articleId }, function(err, result) {
-        res.render('articles/edit', { article: result });
-        console.log(new Date().toLocaleString('en-us', { year: 'numeric', month: 'numeric', day: 'numeric' }));
+        let date = result[0].published_date;
+        let dateFormat = `${date.getFullYear()}-${date.getMonth() + 1}-0${date.getDate()}`;
+        res.render('articles/edit', {
+            article: result,
+            date: dateFormat
+        });
     });
 };
 
 exports.delete = function(req, res, next) {
     let params = req.params;
     Article.deleteOne({ _id: params.articleId }, function(err, result) {
-        res.redirect('/articles');
+        res.redirect('/articles?message=Successfully deleted article!');
     });
 };
 

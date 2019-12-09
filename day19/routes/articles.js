@@ -2,7 +2,7 @@ var router = require('express').Router();
 
 var article_controller = require('../controllers/articlesControllers.js');
 
-router.get('/', article_controller.home);
+router.get('/', article_controller.index);
 router.get('/create', article_controller.create);
 router.post('/create_article', article_controller.create_article);
 router.get('/detail/:articleId', article_controller.detail);
